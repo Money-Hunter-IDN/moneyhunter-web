@@ -144,6 +144,40 @@ html {
   body {
     @apply bg-background text-foreground;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Better touch targets for mobile */
+  @media (pointer: coarse) {
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Improve mobile performance by reducing animations */
+  @media (max-width: 639px) {
+    .hover-scale:hover,
+    .card-lift:hover {
+      transform: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: none;
+    }
   }
 }
 
@@ -245,32 +279,56 @@ html {
   /* Level 2: Enhanced Typography */
   /* Display Headings - Large scale inspired by DogWifHat/Phantom */
   .text-display {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2.25rem, 8vw, 6rem);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
 
+  @media (min-width: 640px) {
+    .text-display {
+      line-height: 1.05;
+    }
+  }
+
   .text-display-sm {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 6vw, 4.5rem);
     font-weight: 800;
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: -0.015em;
+  }
+
+  @media (min-width: 640px) {
+    .text-display-sm {
+      line-height: 1.15;
+    }
   }
 
   /* Hero Headings */
   .text-hero {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-  }
-
-  .text-hero-sm {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 640px) {
+    .text-hero {
+      line-height: 1.2;
+    }
+  }
+
+  .text-hero-sm {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 640px) {
+    .text-hero-sm {
+      line-height: 1.25;
+    }
   }
 
   /* Section Headings */
@@ -317,14 +375,21 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 0.75rem;
     background: linear-gradient(135deg, var(--color-gradient-orange-start), var(--color-gradient-orange-end));
     color: white;
     box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
     transition: all 0.3s ease-out;
+  }
+
+  @media (min-width: 640px) {
+    .btn-primary {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
   }
 
   .btn-primary:hover {
@@ -340,8 +405,8 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 0.75rem;
     background: rgba(255, 255, 255, 0.8);
@@ -350,6 +415,13 @@ html {
     border: 2px solid #FF5900;
     color: #FF5900;
     transition: all 0.3s ease-out;
+  }
+
+  @media (min-width: 640px) {
+    .btn-secondary {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
   }
 
   .btn-secondary:hover {
@@ -387,21 +459,28 @@ html {
   /* Hero Section Spacing */
   .hero-container {
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 1.5rem;
+    padding: 4rem 1rem;
   }
 
   @media (min-width: 640px) {
     .hero-container {
-      padding: 6rem 2rem;
+      padding: 6rem 1.5rem;
     }
   }
 
   @media (min-width: 768px) {
     .hero-container {
       padding: 8rem 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-container {
+      padding: 10rem 2rem;
     }
   }
 
@@ -468,7 +547,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
+    padding: 1rem;
     border-radius: 0.75rem;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -477,15 +556,31 @@ html {
     transition: all 0.3s ease-out;
   }
 
-  .card-social:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
-    border-color: rgba(255, 89, 0, 0.2);
+  @media (hover: hover) {
+    .card-social:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+      border-color: rgba(255, 89, 0, 0.2);
+    }
+  }
+
+  /* Active state for touch devices */
+  @media (hover: none) {
+    .card-social:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.1);
+    }
   }
 
   @media (min-width: 640px) {
     .card-social {
       padding: 1rem 1.25rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card-social {
+      padding: 1.125rem 1.5rem;
     }
   }
 
@@ -496,18 +591,26 @@ html {
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 89, 0, 0.1);
     border-radius: 0.75rem;
-    padding: 1rem 1.5rem;
+    padding: 0.875rem 1rem;
     box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
     transition: all 0.3s ease-out;
   }
 
-  .card-faq:hover {
-    box-shadow: 0 8px 32px -8px rgba(255, 89, 0, 0.25);
-    transform: translateY(-2px);
-    border-color: rgba(255, 89, 0, 0.2);
+  @media (hover: hover) {
+    .card-faq:hover {
+      box-shadow: 0 8px 32px -8px rgba(255, 89, 0, 0.25);
+      transform: translateY(-2px);
+      border-color: rgba(255, 89, 0, 0.2);
+    }
   }
 
   @media (min-width: 640px) {
+    .card-faq {
+      padding: 1.125rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
     .card-faq {
       padding: 1.25rem 1.75rem;
     }
