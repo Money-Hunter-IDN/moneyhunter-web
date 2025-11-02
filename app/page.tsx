@@ -17,8 +17,8 @@ export default function HomePage() {
         <section className="hero-container">
           <div className="container mx-auto text-center max-w-5xl">
             <div className="mb-8 animate-fade-in">
-              <div className="badge-hero inline-flex mb-4">
-                <Bitcoin className="w-4 h-4 icon-float" />
+              <div className="badge-hero inline-flex mb-4 hover-scale">
+                <Bitcoin className="w-4 h-4 icon-float icon-bounce" />
                 <span>2,000+ Learners • Since 2022</span>
               </div>
             </div>
@@ -34,14 +34,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center items-center animate-fade-in-up">
               <a
                 href="#features"
-                className="btn-primary w-full sm:w-auto group"
+                className="btn-primary w-full sm:w-auto group ripple shimmer"
               >
                 Join Our Community
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" />
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
               </a>
               <a
                 href="#faq"
-                className="btn-secondary w-full sm:w-auto"
+                className="btn-secondary w-full sm:w-auto hover-scale"
               >
                 View FAQ
               </a>
@@ -64,32 +64,32 @@ export default function HomePage() {
                 </p>
 
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="icon-feature">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                  <div className="flex items-start space-x-3 sm:space-x-4 slide-in-bottom animate-delay-100">
+                    <div className="icon-feature hover-scale">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full hover-pulse"></div>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Multi-Asset Focus</h3>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg color-transition">Multi-Asset Focus</h3>
                       <p className="text-body text-gray-600 mt-1">Stocks, crypto, and Web3 discussions in one place</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="icon-feature">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                  <div className="flex items-start space-x-3 sm:space-x-4 slide-in-bottom animate-delay-200">
+                    <div className="icon-feature hover-scale">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full hover-pulse"></div>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Peer Learning</h3>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg color-transition">Peer Learning</h3>
                       <p className="text-body text-gray-600 mt-1">Everyone&apos;s a student, no gurus or mentors</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="icon-feature">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                  <div className="flex items-start space-x-3 sm:space-x-4 slide-in-bottom animate-delay-300">
+                    <div className="icon-feature hover-scale">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full hover-pulse"></div>
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Education Focus</h3>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg color-transition">Education Focus</h3>
                       <p className="text-body text-gray-600 mt-1">Knowledge sharing over profit showing</p>
                     </div>
                   </div>
@@ -102,56 +102,56 @@ export default function HomePage() {
                 </h3>
 
                 <div className="space-y-3 sm:space-y-4">
-                  <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-blue-50/50 hover:bg-blue-50 group">
+                  <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-blue-50/50 hover:bg-blue-50 group card-lift slide-in-bottom animate-delay-100">
                     <div className="flex items-center space-x-4">
-                      <div className="icon-social bg-blue-500">
+                      <div className="icon-social bg-blue-500 wiggle">
                         <FaTelegram className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Telegram</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base color-transition">Telegram</h4>
                         <p className="text-xs sm:text-sm text-gray-600">Daily discussions & updates</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-500 transition-all duration-300 group-hover:translate-x-1" />
                   </a>
 
-                  <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="card-social bg-indigo-50/50 hover:bg-indigo-50 group">
+                  <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="card-social bg-indigo-50/50 hover:bg-indigo-50 group card-lift slide-in-bottom animate-delay-200">
                     <div className="flex items-center space-x-4">
-                      <div className="icon-social bg-indigo-500">
+                      <div className="icon-social bg-indigo-500 wiggle">
                         <FaDiscord className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Discord</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base color-transition">Discord</h4>
                         <p className="text-xs sm:text-sm text-gray-600">Structured community</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-indigo-500 transition-all duration-300 group-hover:translate-x-1" />
                   </a>
 
-                  <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-pink-50/50 hover:bg-pink-50 group">
+                  <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-pink-50/50 hover:bg-pink-50 group card-lift slide-in-bottom animate-delay-300">
                     <div className="flex items-center space-x-4">
-                      <div className="icon-social bg-gradient-to-bl from-purple-600 via-pink-500 to-yellow-400">
+                      <div className="icon-social bg-gradient-to-bl from-purple-600 via-pink-500 to-yellow-400 wiggle">
                         <FaInstagram className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Instagram</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base color-transition">Instagram</h4>
                         <p className="text-xs sm:text-sm text-gray-600">Educational content</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-pink-500 transition-colors" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-pink-500 transition-all duration-300 group-hover:translate-x-1" />
                   </a>
 
-                  <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-gray-50/50 hover:bg-gray-50 group">
+                  <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-gray-50/50 hover:bg-gray-50 group card-lift slide-in-bottom animate-delay-400">
                     <div className="flex items-center space-x-4">
-                      <div className="icon-social bg-black">
+                      <div className="icon-social bg-black wiggle">
                         <FaXTwitter className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base">X (Twitter)</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base color-transition">X (Twitter)</h4>
                         <p className="text-xs sm:text-sm text-gray-600">Latest news & insights</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-black transition-colors" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-black transition-all duration-300 group-hover:translate-x-1" />
                   </a>
                 </div>
               </div>
@@ -171,8 +171,8 @@ export default function HomePage() {
             </div>
 
             <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
-              <AccordionItem value="item-1" className="card-faq">
-                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
+              <AccordionItem value="item-1" className="card-faq shadow-transition slide-in-bottom animate-delay-100">
+                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger color-transition">
                   What makes Money Hunter different from other finance communities?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 text-sm sm:text-base">
@@ -180,8 +180,8 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="card-faq">
-                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
+              <AccordionItem value="item-2" className="card-faq shadow-transition slide-in-bottom animate-delay-200">
+                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger color-transition">
                   What topics do you cover in the community?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 text-sm sm:text-base">
@@ -189,8 +189,8 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="card-faq">
-                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
+              <AccordionItem value="item-3" className="card-faq shadow-transition slide-in-bottom animate-delay-300">
+                <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger color-transition">
                   Which platforms should I join and what&apos;s the difference?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 text-sm sm:text-base">
@@ -203,22 +203,22 @@ export default function HomePage() {
 
         <footer className="py-8 px-6 sm:px-4">
           <div className="container mx-auto text-center">
-            <Link href="/" className="flex items-center justify-center space-x-2 mb-4">
-              <Image src="/android-chrome-192x192.png" width={20} height={20} className="sm:w-6 sm:h-6" alt="logo" />
-              <span className="text-base sm:text-lg font-bold text-[#FF5900]">Money Hunter</span>
+            <Link href="/" className="flex items-center justify-center space-x-2 mb-4 hover-scale group">
+              <Image src="/android-chrome-192x192.png" width={20} height={20} className="sm:w-6 sm:h-6 icon-bounce" alt="logo" />
+              <span className="text-base sm:text-lg font-bold text-[#FF5900] gradient-text-hover">Money Hunter</span>
             </Link>
 
             <div className="flex justify-center space-x-4 sm:space-x-6 mb-4 text-gray-600 text-sm sm:text-base">
-              <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Telegram</a>
-              <a href="https://discord.gg/moneyhunter" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Discord</a>
-              <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Instagram</a>
-              <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">X (Twitter)</a>
+              <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="link-underline hover:text-gray-900 color-transition">Telegram</a>
+              <a href="https://discord.gg/moneyhunter" target="_blank" rel="noopener noreferrer" className="link-underline hover:text-gray-900 color-transition">Discord</a>
+              <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="link-underline hover:text-gray-900 color-transition">Instagram</a>
+              <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="link-underline hover:text-gray-900 color-transition">X (Twitter)</a>
             </div>
 
             <div className="flex justify-center space-x-2 sm:space-x-4 text-gray-400 text-xs sm:text-sm">
               <span>&copy; 2025 Money Hunter</span>
               <span>•</span>
-              <Link href="#" className="hover:text-gray-600">Community Guidelines</Link>
+              <Link href="#" className="link-underline hover:text-gray-600 color-transition">Community Guidelines</Link>
             </div>
           </div>
         </footer>
