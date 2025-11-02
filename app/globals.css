@@ -310,4 +310,155 @@ html {
   .font-extrabold {
     font-weight: 800;
   }
+
+  /* Level 3: Enhanced CTA Buttons & Hero Elements */
+  /* Button Enhancements */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--color-gradient-orange-start), var(--color-gradient-orange-end));
+    color: white;
+    box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 32px -8px rgba(255, 89, 0, 0.25);
+    transform: scale(1.05) translateY(-4px);
+  }
+
+  .btn-primary:active {
+    transform: scale(1) translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid #FF5900;
+    color: #FF5900;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-secondary:hover {
+    box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    transform: scale(1.05) translateY(-4px);
+    background: rgba(255, 89, 0, 0.05);
+  }
+
+  .btn-secondary:active {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Badge Enhancement */
+  .badge-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 89, 0, 0.3);
+    color: #FF5900;
+    box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    font-weight: 600;
+  }
+
+  @media (min-width: 640px) {
+    .badge-hero {
+      font-size: 1rem;
+    }
+  }
+
+  /* Hero Section Spacing */
+  .hero-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .hero-container {
+      padding: 6rem 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero-container {
+      padding: 8rem 2rem;
+    }
+  }
+
+  /* Icon Animations */
+  .icon-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    }
+    50% {
+      box-shadow: 0 8px 32px -8px rgba(255, 89, 0, 0.35);
+    }
+  }
+
+  /* Fade in animations */
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

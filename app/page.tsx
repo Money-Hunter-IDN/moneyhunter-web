@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
@@ -15,40 +14,40 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-gray-900">
       <div className="fixed inset-0 gradient-orange-soft"></div>
       <div className="relative">
-        <section className="py-16 sm:py-20 md:py-10 px-6 sm:px-4 min-h-screen flex items-center justify-center">
-          <div className="container mx-auto text-center max-w-4xl">
-            <div className="mb-6">
-              <Badge className="bg-[#FF5900]/10 text-[#FF5900] border-[#FF5900]/30 mb-4 shadow-md shadow-[#FF5900]/10 text-sm sm:text-base">
-                <Bitcoin className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                2,000+ Learners • Since 2022
-              </Badge>
+        <section className="hero-container">
+          <div className="container mx-auto text-center max-w-5xl">
+            <div className="mb-8 animate-fade-in">
+              <div className="badge-hero inline-flex mb-4">
+                <Bitcoin className="w-4 h-4 icon-float" />
+                <span>2,000+ Learners • Since 2022</span>
+              </div>
             </div>
 
-            <h1 className="text-display font-extrabold mb-8 text-balance">
+            <h1 className="text-display font-extrabold mb-10 text-balance animate-fade-in-up">
               Web3 & Finance <span className="gradient-text-orange">Community</span>
             </h1>
 
-            <p className="text-body-lg text-gray-600 mb-12 max-w-3xl mx-auto text-pretty">
+            <p className="text-body-lg text-gray-600 mb-14 max-w-3xl mx-auto text-pretty animate-fade-in-up">
               A knowledge-sharing community where we&apos;re all students. Learn about stocks, cryptocurrencies, market analysis, and Web3 developments through peer-to-peer discussions and educational content.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center items-center animate-fade-in-up">
               <a
                 href="#features"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg gradient-orange text-white hover:shadow-glow-orange-lg transition-all duration-200 shadow-glow-orange w-full sm:w-auto group"
+                className="btn-primary w-full sm:w-auto group"
               >
                 Join Our Community
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" />
               </a>
               <a
                 href="#faq"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg glass border-2 border-[#FF5900] text-[#FF5900] hover:shadow-glow-orange transition-all duration-200 shadow-sm group w-full sm:w-auto"
+                className="btn-secondary w-full sm:w-auto"
               >
                 View FAQ
               </a>
             </div>
           </div>
-        </section >
+        </section>
 
         <section id="features" className="py-24 sm:py-36 md:py-40 px-6 sm:px-4 flex items-center justify-center">
           <div className="container mx-auto max-w-6xl">
