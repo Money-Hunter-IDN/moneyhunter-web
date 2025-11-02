@@ -13,7 +13,7 @@ import { FaTelegram, FaDiscord, FaInstagram, FaXTwitter } from 'react-icons/fa6'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      <div className="fixed inset-0 bg-gradient-to-r from-[#FF5900]/8 via-white to-[#FF5900]/8"></div>
+      <div className="fixed inset-0 gradient-orange-soft"></div>
       <div className="relative">
         <section className="py-16 sm:py-20 md:py-10 px-6 sm:px-4 min-h-screen flex items-center justify-center">
           <div className="container mx-auto text-center max-w-4xl">
@@ -24,8 +24,8 @@ export default function HomePage() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text">
-              Web3 & Finance Community
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+              Web3 & Finance <span className="gradient-text-orange">Community</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
@@ -35,14 +35,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a
                 href="#features"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg gradient-orange text-white hover:shadow-glow-orange-lg transition-all duration-200 shadow-glow-orange w-full sm:w-auto group"
               >
                 Join Our Community
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
               <a
                 href="#faq"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg border-2 border-[#FF5900] text-[#FF5900] bg-white hover:bg-[#FF5900]/10 hover:text-[#FF5900] hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-sm group w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg glass border-2 border-[#FF5900] text-[#FF5900] hover:shadow-glow-orange transition-all duration-200 shadow-sm group w-full sm:w-auto"
               >
                 View FAQ
               </a>
@@ -56,7 +56,7 @@ export default function HomePage() {
               <div className="md:col-span-1 lg:col-span-7">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                   Knowledge Sharing{" "}
-                  <span className="text-[#FF5900]">Community</span>
+                  <span className="gradient-text-orange">Community</span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
                   Connect with 2,000+ learners exploring stocks, crypto, and Web3.
@@ -66,7 +66,7 @@ export default function HomePage() {
 
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#FF5900] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#FF5900] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -86,7 +86,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#FF5900] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -172,7 +172,7 @@ export default function HomePage() {
             </div>
 
             <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
-              <AccordionItem value="item-1" className="bg-white/80 backdrop-blur-sm border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
+              <AccordionItem value="item-1" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   What makes Money Hunter different from other finance communities?
                 </AccordionTrigger>
@@ -181,7 +181,7 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="bg-white/80 backdrop-blur-sm border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
+              <AccordionItem value="item-2" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   What topics do you cover in the community?
                 </AccordionTrigger>
@@ -190,7 +190,7 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="bg-white/80 backdrop-blur-sm border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
+              <AccordionItem value="item-3" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   Which platforms should I join and what&apos;s the difference?
                 </AccordionTrigger>
