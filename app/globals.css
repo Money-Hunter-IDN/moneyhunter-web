@@ -463,24 +463,24 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 1rem;
+    padding: 4rem 0;
   }
 
   @media (min-width: 640px) {
     .hero-container {
-      padding: 6rem 1.5rem;
+      padding: 6rem 0;
     }
   }
 
   @media (min-width: 768px) {
     .hero-container {
-      padding: 8rem 2rem;
+      padding: 8rem 0;
     }
   }
 
   @media (min-width: 1024px) {
     .hero-container {
-      padding: 10rem 2rem;
+      padding: 10rem 0;
     }
   }
 
@@ -591,9 +591,10 @@ html {
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 89, 0, 0.1);
     border-radius: 0.75rem;
-    padding: 0.875rem 1rem;
+    padding: 0 1rem;
     box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
     transition: all 0.3s ease-out;
+    overflow: hidden;
   }
 
   @media (hover: hover) {
@@ -606,13 +607,13 @@ html {
 
   @media (min-width: 640px) {
     .card-faq {
-      padding: 1.125rem 1.5rem;
+      padding: 0 1.25rem;
     }
   }
 
   @media (min-width: 768px) {
     .card-faq {
-      padding: 1.25rem 1.75rem;
+      padding: 0 1.5rem;
     }
   }
 

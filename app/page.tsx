@@ -15,7 +15,7 @@ export default function HomePage() {
       <div className="fixed inset-0 gradient-orange-soft"></div>
       <div className="relative">
         <section className="hero-container">
-          <div className="container mx-auto text-center max-w-5xl px-4 sm:px-6">
+          <div className="container mx-auto text-center max-w-5xl px-6 sm:px-8">
             <div className="mb-6 sm:mb-8 animate-fade-in">
               <div className="badge-hero inline-flex mb-4 hover-scale">
                 <Bitcoin className="w-4 h-4" />
@@ -23,15 +23,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <h1 className="text-display font-extrabold mb-6 sm:mb-8 md:mb-10 text-balance animate-fade-in-up px-2">
+            <h1 className="text-display font-extrabold mb-6 sm:mb-8 md:mb-10 text-balance animate-fade-in-up">
               Web3 & Finance <span className="gradient-text-orange">Community</span>
             </h1>
 
-            <p className="text-body-lg text-gray-600 mb-8 sm:mb-12 md:mb-14 max-w-3xl mx-auto text-pretty animate-fade-in-up px-2">
+            <p className="text-body-lg text-gray-600 mb-8 sm:mb-12 md:mb-14 max-w-3xl mx-auto text-pretty animate-fade-in-up">
               A knowledge-sharing community where we&apos;re all students. Learn about stocks, cryptocurrencies, market analysis, and Web3 developments through peer-to-peer discussions and educational content.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6 justify-center items-stretch sm:items-center animate-fade-in-up px-2">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6 justify-center items-stretch sm:items-center animate-fade-in-up">
               <a
                 href="#features"
                 className="btn-primary w-full sm:w-auto group ripple shimmer min-h-[56px] sm:min-h-0"
@@ -49,8 +49,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="features" className="py-16 sm:py-24 md:py-36 lg:py-40 px-4 sm:px-6 flex items-center justify-center">
-          <div className="container mx-auto max-w-6xl">
+        <section id="features" className="py-16 sm:py-24 md:py-36 lg:py-40 flex items-center justify-center">
+          <div className="container mx-auto max-w-6xl px-6 sm:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-14 items-start md:items-center">
               <div className="md:col-span-1 lg:col-span-7">
                 <h2 className="text-display-sm font-extrabold mb-4 sm:mb-6 text-gray-900 text-balance">
@@ -159,13 +159,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="faq" className="py-16 sm:py-20 md:py-32 lg:py-40 px-4 sm:px-6 flex items-center justify-center">
-          <div className="container mx-auto max-w-3xl">
+        <section id="faq" className="py-16 sm:py-20 md:py-32 lg:py-40 flex items-center justify-center">
+          <div className="container mx-auto max-w-3xl px-6 sm:px-8">
             <div className="text-center mb-10 sm:mb-12 md:mb-16">
-              <h2 className="text-display-sm font-extrabold mb-3 sm:mb-4 text-gray-900 text-balance px-2">
+              <h2 className="text-display-sm font-extrabold mb-3 sm:mb-4 text-gray-900 text-balance">
                 Frequently Asked Questions
               </h2>
-              <p className="pt-2 sm:pt-4 text-base sm:text-lg md:text-xl text-gray-600 text-pretty px-2">
+              <p className="pt-2 sm:pt-4 text-base sm:text-lg md:text-xl text-gray-600 text-pretty">
                 Everything you need to know about Money Hunter community.
               </p>
             </div>
@@ -201,8 +201,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        <footer className="py-8 sm:py-10 px-4 sm:px-6">
-          <div className="container mx-auto text-center max-w-4xl">
+        <footer className="py-8 sm:py-10">
+          <div className="container mx-auto text-center max-w-4xl px-6 sm:px-8">
             <Link href="/" className="inline-flex items-center justify-center space-x-2 mb-5 sm:mb-6 hover-scale group">
               <Image src="/android-chrome-192x192.png" width={20} height={20} className="sm:w-6 sm:h-6" alt="logo" />
               <span className="text-base sm:text-lg font-bold text-[#FF5900] gradient-text-hover">Money Hunter</span>
