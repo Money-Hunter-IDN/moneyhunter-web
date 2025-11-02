@@ -24,11 +24,11 @@ export default function HomePage() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+            <h1 className="text-display font-extrabold mb-8 text-balance">
               Web3 & Finance <span className="gradient-text-orange">Community</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-body-lg text-gray-600 mb-12 max-w-3xl mx-auto text-pretty">
               A knowledge-sharing community where we&apos;re all students. Learn about stocks, cryptocurrencies, market analysis, and Web3 developments through peer-to-peer discussions and educational content.
             </p>
 
@@ -54,11 +54,11 @@ export default function HomePage() {
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="md:col-span-1 lg:col-span-7">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                <h2 className="text-display-sm font-extrabold mb-6 text-gray-900 text-balance">
                   Knowledge Sharing{" "}
                   <span className="gradient-text-orange">Community</span>
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                <p className="text-body-lg text-gray-600 mb-8 text-pretty">
                   Connect with 2,000+ learners exploring stocks, crypto, and Web3.
                   Share knowledge, learn from peers, and grow together in a supportive
                   environment where everyone&apos;s a student.
@@ -70,8 +70,8 @@ export default function HomePage() {
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Multi-Asset Focus</h3>
-                      <p className="text-gray-600 text-sm sm:text-base">Stocks, crypto, and Web3 discussions in one place</p>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Multi-Asset Focus</h3>
+                      <p className="text-body text-gray-600 mt-1">Stocks, crypto, and Web3 discussions in one place</p>
                     </div>
                   </div>
 
@@ -80,8 +80,8 @@ export default function HomePage() {
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Peer Learning</h3>
-                      <p className="text-gray-600 text-sm sm:text-base">Everyone&apos;s a student, no gurus or mentors</p>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Peer Learning</h3>
+                      <p className="text-body text-gray-600 mt-1">Everyone&apos;s a student, no gurus or mentors</p>
                     </div>
                   </div>
 
@@ -90,15 +90,15 @@ export default function HomePage() {
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Education Focus</h3>
-                      <p className="text-gray-600 text-sm sm:text-base">Knowledge sharing over profit showing</p>
+                      <h3 className="font-bold text-gray-900 text-base sm:text-lg">Education Focus</h3>
+                      <p className="text-body text-gray-600 mt-1">Knowledge sharing over profit showing</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="md:col-span-1 lg:col-span-5">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                <h3 className="text-hero-sm font-extrabold text-gray-900 mb-6 text-center">
                   Join Our Community
                 </h3>
 
@@ -163,10 +163,10 @@ export default function HomePage() {
         <section id="faq" className="py-20 sm:py-24 md:py-40 px-6 sm:px-4 flex items-center justify-center">
           <div className="container mx-auto max-w-3xl px-4 sm:px-0">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
+              <h2 className="text-display-sm font-extrabold mb-4 text-gray-900 text-balance">
                 Frequently Asked Questions
               </h2>
-              <p className="pt-4 text-lg sm:text-xl text-gray-600">
+              <p className="pt-4 text-body-lg text-gray-600 text-pretty">
                 Everything you need to know about Money Hunter community.
               </p>
             </div>
