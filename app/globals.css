@@ -461,4 +461,120 @@ html {
       transform: translateY(0);
     }
   }
+
+  /* Level 4: Enhanced Cards & Glassmorphism */
+  /* Social Media Cards */
+  .card-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-out;
+  }
+
+  .card-social:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 89, 0, 0.2);
+  }
+
+  @media (min-width: 640px) {
+    .card-social {
+      padding: 1rem 1.25rem;
+    }
+  }
+
+  /* Enhanced FAQ Cards */
+  .card-faq {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 89, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    transition: all 0.3s ease-out;
+  }
+
+  .card-faq:hover {
+    box-shadow: 0 8px 32px -8px rgba(255, 89, 0, 0.25);
+    transform: translateY(-2px);
+    border-color: rgba(255, 89, 0, 0.2);
+  }
+
+  @media (min-width: 640px) {
+    .card-faq {
+      padding: 1.25rem 1.75rem;
+    }
+  }
+
+  /* Feature Icon Container */
+  .icon-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-gradient-orange-start), var(--color-gradient-orange-end));
+    box-shadow: 0 4px 24px -4px rgba(255, 89, 0, 0.15);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .icon-feature:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px -4px rgba(255, 89, 0, 0.25);
+  }
+
+  @media (min-width: 640px) {
+    .icon-feature {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  /* Social Icon Container */
+  .icon-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .icon-social:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  @media (min-width: 640px) {
+    .icon-social {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  /* Enhanced Glass Variants */
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
 }

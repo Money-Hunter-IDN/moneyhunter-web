@@ -65,7 +65,7 @@ export default function HomePage() {
 
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
+                    <div className="icon-feature">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -75,7 +75,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
+                    <div className="icon-feature">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -85,7 +85,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 gradient-orange rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1 shadow-glow-orange">
+                    <div className="icon-feature">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                     </div>
                     <div>
@@ -102,9 +102,9 @@ export default function HomePage() {
                 </h3>
 
                 <div className="space-y-3 sm:space-y-4">
-                  <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 sm:p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                  <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-blue-50/50 hover:bg-blue-50 group">
                     <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <div className="icon-social bg-blue-500">
                         <FaTelegram className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
@@ -112,12 +112,12 @@ export default function HomePage() {
                         <p className="text-xs sm:text-sm text-gray-600">Daily discussions & updates</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-500" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
                   </a>
 
-                  <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 sm:p-4 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors group">
+                  <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="card-social bg-indigo-50/50 hover:bg-indigo-50 group">
                     <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500 rounded-lg flex items-center justify-center">
+                      <div className="icon-social bg-indigo-500">
                         <FaDiscord className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
@@ -125,12 +125,12 @@ export default function HomePage() {
                         <p className="text-xs sm:text-sm text-gray-600">Structured community</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-indigo-500" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                   </a>
 
-                  <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 sm:p-4 bg-pink-50 hover:bg-pink-100 rounded-lg transition-colors group">
+                  <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-pink-50/50 hover:bg-pink-50 group">
                     <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-bl from-purple-600 via-pink-500 to-yellow-400 rounded-lg flex items-center justify-center">
+                      <div className="icon-social bg-gradient-to-bl from-purple-600 via-pink-500 to-yellow-400">
                         <FaInstagram className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
@@ -138,12 +138,12 @@ export default function HomePage() {
                         <p className="text-xs sm:text-sm text-gray-600">Educational content</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-pink-500" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-pink-500 transition-colors" />
                   </a>
 
-                  <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 sm:p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors group">
+                  <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="card-social bg-gray-50/50 hover:bg-gray-50 group">
                     <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-lg flex items-center justify-center">
+                      <div className="icon-social bg-black">
                         <FaXTwitter className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                       </div>
                       <div>
@@ -151,7 +151,7 @@ export default function HomePage() {
                         <p className="text-xs sm:text-sm text-gray-600">Latest news & insights</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-black" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-black transition-colors" />
                   </a>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
             </div>
 
             <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
-              <AccordionItem value="item-1" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
+              <AccordionItem value="item-1" className="card-faq">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   What makes Money Hunter different from other finance communities?
                 </AccordionTrigger>
@@ -180,7 +180,7 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
+              <AccordionItem value="item-2" className="card-faq">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   What topics do you cover in the community?
                 </AccordionTrigger>
@@ -189,7 +189,7 @@ export default function HomePage() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="glass border-[#FF5900]/10 rounded-lg px-4 sm:px-6 shadow-glow-orange hover:shadow-glow-orange-lg transition-shadow duration-200">
+              <AccordionItem value="item-3" className="card-faq">
                 <AccordionTrigger className="text-gray-900 hover:text-[#FF5900] text-base sm:text-lg accordion-trigger">
                   Which platforms should I join and what&apos;s the difference?
                 </AccordionTrigger>
