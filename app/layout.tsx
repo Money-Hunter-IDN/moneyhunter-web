@@ -10,9 +10,69 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "Money Hunter",
+  title: {
+    default: "Money Hunter - Web3 & Finance Community Indonesia",
+    template: "%s | Money Hunter",
+  },
   description:
-    "Web3 & Finance Community",
+    "Komunitas belajar Web3, crypto, dan finance Indonesia. Bergabung dengan 2,000+ learners sejak 2022. Belajar bersama tentang stocks, cryptocurrency, dan blockchain.",
+  keywords: [
+    "Web3",
+    "crypto",
+    "cryptocurrency",
+    "finance",
+    "komunitas",
+    "Indonesia",
+    "blockchain",
+    "DeFi",
+    "stocks",
+    "trading",
+    "belajar crypto",
+  ],
+  authors: [{ name: "Money Hunter Community" }],
+  creator: "Money Hunter",
+  publisher: "Money Hunter",
+  metadataBase: new URL("https://moneyhunter.id"),
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://moneyhunter.id",
+    siteName: "Money Hunter",
+    title: "Money Hunter - Web3 & Finance Community Indonesia",
+    description:
+      "Komunitas belajar Web3, crypto, dan finance Indonesia. Bergabung dengan 2,000+ learners sejak 2022.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Money Hunter - Web3 & Finance Community",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Money Hunter - Web3 & Finance Community Indonesia",
+    description:
+      "Komunitas belajar Web3, crypto, dan finance Indonesia. Bergabung dengan 2,000+ learners sejak 2022.",
+    images: ["/og-image.png"],
+    creator: "@moneyhunteridn",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/android-chrome-192x192.png",
+  },
 };
 
 export default function RootLayout({
