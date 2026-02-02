@@ -1,6 +1,6 @@
 export default function Loading() {
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center">
             <div className="flex flex-col items-center gap-4">
                 {/* Spinner */}
                 <div className="relative">

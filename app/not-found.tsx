@@ -4,7 +4,7 @@ import { BackButton } from "@/components/back-button";
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center px-6">
+        <div className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center px-6">
             <div className="text-center max-w-md">
                 {/* 404 Number */}
                 <div className="mb-8">
@@ -14,10 +14,10 @@ export default function NotFound() {
                 </div>
 
                 {/* Message */}
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                     Halaman Tidak Ditemukan
                 </h1>
-                <p className="text-gray-600 mb-8 text-base sm:text-lg">
+                <p className="text-gray-600 dark:text-gray-400 mb-8 text-base sm:text-lg">
                     Maaf, halaman yang kamu cari tidak ada atau sudah dipindahkan.
                 </p>
 

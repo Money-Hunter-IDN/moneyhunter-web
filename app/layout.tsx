@@ -8,6 +8,7 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -81,8 +82,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+        <link rel="manifest" href="/manifest.json" />
         <style>{`
 html {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -91,15 +107,17 @@ html {
 }
         `}</style>
       </head>
-      <body className="antialiased">
-        {/* Skip to content for accessibility */}
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
-        <Navbar />
-        <main id="main-content">
-          {children}
-        </main>
+      <body className="antialiased bg-background text-foreground">
+        <ThemeProvider>
+          {/* Skip to content for accessibility */}
+          <a href="#main-content" className="skip-to-content">
+            Skip to main content
+          </a>
+          <Navbar />
+          <main id="main-content">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
