@@ -211,13 +211,13 @@ export default function HomePage() {
 
             <div className="flex justify-center space-x-4 sm:space-x-6 mb-4 text-gray-600 text-sm sm:text-base">
               <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Telegram</a>
-              <a href="https://discord.gg/moneyhunter" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Discord</a>
+              <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Discord</a>
               <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">Instagram</a>
               <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">X (Twitter)</a>
             </div>
 
             <div className="flex justify-center space-x-2 sm:space-x-4 text-gray-400 text-xs sm:text-sm">
-              <span>&copy; 2025 Money Hunter</span>
+              <span>&copy; 2026 Money Hunter</span>
               <span>•</span>
               <Link href="#" className="hover:text-gray-600">Community Guidelines</Link>
             </div>
