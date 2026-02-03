@@ -9,6 +9,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { LanguageProvider } from "@/components/language-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -109,14 +110,16 @@ html {
       </head>
       <body className="antialiased bg-background text-foreground">
         <ThemeProvider>
-          {/* Skip to content for accessibility */}
-          <a href="#main-content" className="skip-to-content">
-            Skip to main content
-          </a>
-          <Navbar />
-          <main id="main-content">
-            {children}
-          </main>
+          <LanguageProvider>
+            {/* Skip to content for accessibility */}
+            <a href="#main-content" className="skip-to-content">
+              Skip to main content
+            </a>
+            <Navbar />
+            <main id="main-content">
+              {children}
+            </main>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -6,9 +6,28 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
+import { useLanguage } from "@/components/language-provider";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
+
+  const t = {
+    en: {
+      community: "Community",
+      faq: "FAQ",
+      join: "Join Our Community",
+      education: "Education",
+    },
+    id: {
+      community: "Komunitas",
+      faq: "FAQ",
+      join: "Gabung Komunitas",
+      education: "Edukasi",
+    },
+  }[language];
 
   useEffect(() => {
     const onResize = () => {
@@ -47,32 +66,40 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a
-            href="#features"
+          <Link
+            href="/#features"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            Community
-          </a>
-          <a
-            href="#faq"
+            {t.community}
+          </Link>
+          <Link
+            href="/#faq"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            FAQ
-          </a>
+            {t.faq}
+          </Link>
+          <Link
+            href="/education"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+          >
+            {t.education}
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <a
-            href="#features"
+          <LanguageToggle />
+          <Link
+            href="/#features"
             className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg bg-[#FF5900] text-white hover:bg-[#FF5900]/90 hover:shadow-lg hover:shadow-[#FF5900]/25 shadow-md"
           >
-            Join Our Community
-          </a>
+            {t.join}
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
+          <LanguageToggle />
           <button
             aria-label="Toggle navigation menu"
             aria-expanded={open}
@@ -95,20 +122,27 @@ const Navbar = () => {
       >
         <div className="px-4 py-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
           <nav className="flex flex-col gap-3">
-            <a
-              href="#features"
+            <Link
+              href="/#features"
               onClick={closeMenu}
               className="px-2 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              Community
-            </a>
-            <a
-              href="#faq"
+              {t.community}
+            </Link>
+            <Link
+              href="/#faq"
               onClick={closeMenu}
               className="px-2 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              FAQ
-            </a>
+              {t.faq}
+            </Link>
+            <Link
+              href="/education"
+              onClick={closeMenu}
+              className="px-2 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              {t.education}
+            </Link>
           </nav>
 
           <div className="mt-4 flex flex-col gap-2">
@@ -117,7 +151,7 @@ const Navbar = () => {
               className="bg-[#FF5900] hover:bg-[#FF5900]/90 text-white"
               asChild
             >
-              <a href="#features">Join Our Community</a>
+              <Link href="/#features">{t.join}</Link>
             </Button>
           </div>
         </div>
