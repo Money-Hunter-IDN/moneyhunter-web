@@ -13,6 +13,8 @@ import { ArrowRight, Bitcoin } from "lucide-react";
 import { FaTelegram, FaDiscord, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import { FadeInSection } from "@/components/fade-in-section";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { InvestmentCalculator } from "@/components/investment-calculator";
+import { MarketTicker } from "@/components/market-ticker";
 
 export default function HomePage() {
   return (
@@ -52,7 +54,9 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-        </section >
+        </section>
+
+        <MarketTicker />
 
         <section id="features" className="py-24 sm:py-36 md:py-40 px-6 sm:px-4 flex items-center justify-center">
           <FadeInSection>
@@ -162,6 +166,22 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </FadeInSection>
+        </section>
+
+        <section id="calculator" className="py-20 sm:py-24 px-6 sm:px-4 bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center">
+          <FadeInSection>
+            <div className="container mx-auto max-w-5xl">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Plan Your <span className="text-[#FF5900]">Financial Future</span>
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                  See how small consistent investments can grow over time with the power of compound interest.
+                </p>
+              </div>
+              <InvestmentCalculator />
             </div>
           </FadeInSection>
         </section>
