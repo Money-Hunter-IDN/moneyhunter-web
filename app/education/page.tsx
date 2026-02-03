@@ -15,6 +15,7 @@ import {
     LineChart
 } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
+import { Footer } from "@/components/footer";
 
 export default function EducationPage() {
     const { language } = useLanguage();
@@ -395,6 +396,7 @@ export default function EducationPage() {
                     </a>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

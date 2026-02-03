@@ -16,6 +16,7 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import { InvestmentCalculator } from "@/components/investment-calculator";
 import { MarketTicker } from "@/components/market-ticker";
 import { useLanguage } from "@/components/language-provider";
+import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -290,27 +291,7 @@ export default function HomePage() {
           </FadeInSection>
         </section>
 
-        <footer className="py-8 px-6 sm:px-4">
-          <div className="container mx-auto text-center">
-            <Link href="/" className="flex items-center justify-center space-x-2 mb-4">
-              <Image src="/android-chrome-192x192.png" width={20} height={20} className="sm:w-6 sm:h-6" alt="logo" />
-              <span className="text-base sm:text-lg font-bold text-[#FF5900]">Money Hunter</span>
-            </Link>
-
-            <div className="flex justify-center space-x-4 sm:space-x-6 mb-4 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
-              <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-white">Telegram</a>
-              <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-white">Discord</a>
-              <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-white">Instagram</a>
-              <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-white">X (Twitter)</a>
-            </div>
-
-            <div className="flex justify-center space-x-2 sm:space-x-4 text-gray-400 dark:text-gray-500 text-xs sm:text-sm">
-              <span>&copy; 2026 Money Hunter</span>
-              <span>•</span>
-              <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300">Community Guidelines</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
       <ScrollToTop />
     </div>

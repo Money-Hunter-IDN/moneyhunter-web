@@ -48,8 +48,8 @@ const Navbar = () => {
 
   return (
     <header className="border-b border-gray-200 dark:border-gray-800 backdrop-blur-sm fixed w-full top-0 z-50 bg-white/95 dark:bg-gray-900/95">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+      <div className="container mx-auto px-4 py-4 flex items-center">
+        <div className="flex-1 flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-transparent flex items-center justify-center">
               <Image
@@ -65,7 +65,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center justify-center gap-8">
           <Link
             href="/#features"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -86,7 +86,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center justify-end gap-4 flex-1">
           <ThemeToggle />
           <LanguageToggle />
           <Link
@@ -97,7 +97,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 md:hidden ml-auto">
           <ThemeToggle />
           <LanguageToggle />
           <button
