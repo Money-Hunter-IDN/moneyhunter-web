@@ -110,13 +110,23 @@ export default function HomePage() {
     }
   };
 
+  const handleJoin = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.open("https://t.me/moneyhunteridn", "_blank");
+    } else {
+      window.open("https://discord.gg/PcrwafBjAA", "_blank");
+    }
+  };
+
   const t = content[language];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
       <div className="fixed inset-0 bg-gradient-to-r from-[#FF5900]/8 via-white dark:via-gray-950 to-[#FF5900]/8"></div>
       <div className="relative">
-        <section className="py-16 sm:py-20 md:py-10 px-6 sm:px-4 min-h-screen flex items-center justify-center">
+        <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-24 md:pb-16 px-6 sm:px-4 min-h-[90vh] flex items-center justify-center">
           <div className="container mx-auto text-center max-w-4xl">
             <div className="mb-6">
               <Badge className="bg-[#FF5900]/10 text-[#FF5900] border-[#FF5900]/30 mb-4 shadow-md shadow-[#FF5900]/10 text-sm sm:text-base">
@@ -136,7 +146,8 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a
                 href="#features"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] border-2 border-transparent text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto"
+                onClick={handleJoin}
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] border-2 border-transparent text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto cursor-pointer"
               >
                 {t.hero.cta_join}
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />

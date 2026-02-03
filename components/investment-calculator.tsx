@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
     AreaChart,
     Area,
@@ -19,6 +19,11 @@ export function InvestmentCalculator() {
         interestRate: 7,
         years: 10,
     });
+
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const calculationData = useMemo(() => {
         const data = [];
@@ -220,84 +225,86 @@ export function InvestmentCalculator() {
                     {/* Chart Section */}
                     <div className="lg:col-span-2 min-h-[300px] flex flex-col justify-center">
                         <div className="h-[300px] sm:h-[400px] w-full">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <AreaChart
-                                    data={calculationData}
-                                    margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
-                                >
-                                    <defs>
-                                        <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#FF5900" stopOpacity={0.3} />
-                                            <stop offset="95%" stopColor="#FF5900" stopOpacity={0} />
-                                        </linearGradient>
-                                        <linearGradient id="colorInvested" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#94a3b8" stopOpacity={0.3} />
-                                            <stop offset="95%" stopColor="#94a3b8" stopOpacity={0} />
-                                        </linearGradient>
-                                    </defs>
-                                    <CartesianGrid
-                                        strokeDasharray="3 3"
-                                        vertical={false}
-                                        stroke="#e5e7eb"
-                                        className="dark:opacity-10"
-                                    />
-                                    <XAxis
-                                        dataKey="year"
-                                        stroke="#9ca3af"
-                                        fontSize={12}
-                                        tickLine={false}
-                                        axisLine={false}
-                                    />
-                                    <YAxis
-                                        stroke="#9ca3af"
-                                        fontSize={12}
-                                        tickLine={false}
-                                        axisLine={false}
-                                        tickFormatter={(value) =>
-                                            new Intl.NumberFormat("id-ID", {
-                                                notation: "compact",
-                                                compactDisplay: "short",
-                                                maximumFractionDigits: 1,
-                                            }).format(value)
-                                        }
-                                    />
-                                    <Tooltip
-                                        contentStyle={{
-                                            backgroundColor: "rgba(255, 255, 255, 0.95)",
-                                            borderRadius: "0.75rem",
-                                            border: "none",
-                                            boxShadow:
-                                                "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                                            color: "#1f2937",
-                                        }}
-                                        itemStyle={{ color: "#374151" }} // Default text color
-                                        labelStyle={{ color: "#6b7280", marginBottom: "0.25rem" }}
-                                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                        formatter={(value: any, name: any) => [
-                                            formatCurrency(value || 0),
-                                            name === "Total Balance" ? "Total Balance" : "Invested Capital"
-                                        ]}
-                                    />
-                                    <Area
-                                        type="monotone"
-                                        dataKey="balance"
-                                        name="Total Balance"
-                                        stroke="#FF5900"
-                                        strokeWidth={3}
-                                        fillOpacity={1}
-                                        fill="url(#colorBalance)"
-                                    />
-                                    <Area
-                                        type="monotone"
-                                        dataKey="invested"
-                                        name="Invested Capital"
-                                        stroke="#94a3b8"
-                                        strokeWidth={2}
-                                        fillOpacity={1}
-                                        fill="url(#colorInvested)"
-                                    />
-                                </AreaChart>
-                            </ResponsiveContainer>
+                            {mounted && (
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <AreaChart
+                                        data={calculationData}
+                                        margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+                                    >
+                                        <defs>
+                                            <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#FF5900" stopOpacity={0.3} />
+                                                <stop offset="95%" stopColor="#FF5900" stopOpacity={0} />
+                                            </linearGradient>
+                                            <linearGradient id="colorInvested" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#94a3b8" stopOpacity={0.3} />
+                                                <stop offset="95%" stopColor="#94a3b8" stopOpacity={0} />
+                                            </linearGradient>
+                                        </defs>
+                                        <CartesianGrid
+                                            strokeDasharray="3 3"
+                                            vertical={false}
+                                            stroke="#e5e7eb"
+                                            className="dark:opacity-10"
+                                        />
+                                        <XAxis
+                                            dataKey="year"
+                                            stroke="#9ca3af"
+                                            fontSize={12}
+                                            tickLine={false}
+                                            axisLine={false}
+                                        />
+                                        <YAxis
+                                            stroke="#9ca3af"
+                                            fontSize={12}
+                                            tickLine={false}
+                                            axisLine={false}
+                                            tickFormatter={(value) =>
+                                                new Intl.NumberFormat("id-ID", {
+                                                    notation: "compact",
+                                                    compactDisplay: "short",
+                                                    maximumFractionDigits: 1,
+                                                }).format(value)
+                                            }
+                                        />
+                                        <Tooltip
+                                            contentStyle={{
+                                                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                                                borderRadius: "0.75rem",
+                                                border: "none",
+                                                boxShadow:
+                                                    "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                                color: "#1f2937",
+                                            }}
+                                            itemStyle={{ color: "#374151" }} // Default text color
+                                            labelStyle={{ color: "#6b7280", marginBottom: "0.25rem" }}
+                                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                            formatter={(value: any, name: any) => [
+                                                formatCurrency(value || 0),
+                                                name === "Total Balance" ? "Total Balance" : "Invested Capital"
+                                            ]}
+                                        />
+                                        <Area
+                                            type="monotone"
+                                            dataKey="balance"
+                                            name="Total Balance"
+                                            stroke="#FF5900"
+                                            strokeWidth={3}
+                                            fillOpacity={1}
+                                            fill="url(#colorBalance)"
+                                        />
+                                        <Area
+                                            type="monotone"
+                                            dataKey="invested"
+                                            name="Invested Capital"
+                                            stroke="#94a3b8"
+                                            strokeWidth={2}
+                                            fillOpacity={1}
+                                            fill="url(#colorInvested)"
+                                        />
+                                    </AreaChart>
+                                </ResponsiveContainer>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -152,15 +152,15 @@ html {
           }}
         />
       </head>
-      <body className="antialiased bg-background text-foreground">
+      <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
         <ThemeProvider>
           <LanguageProvider>
             {/* Skip to content for accessibility */}
-            <a href="#main-content" className="skip-to-content">
+            <a href="#main-content" className="skip-to-content focus:outline-none focus:ring-2 focus:ring-[#FF5900] focus:ring-offset-2">
               Skip to main content
             </a>
             <Navbar />
-            <main id="main-content">
+            <main id="main-content" className="flex-grow">
               {children}
             </main>
           </LanguageProvider>
