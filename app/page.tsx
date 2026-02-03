@@ -7,8 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Bitcoin } from "lucide-react";
 import { FaTelegram, FaDiscord, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import { FadeInSection } from "@/components/fade-in-section";
@@ -138,7 +136,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a
                 href="#features"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] border-2 border-transparent text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto"
               >
                 {t.hero.cta_join}
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
