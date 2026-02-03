@@ -19,7 +19,7 @@ const FALLBACK_DATA: CryptoPrice[] = [
     { id: "ripple", symbol: "XRP", name: "XRP", current_price_usd: 1.5, price_change_percentage_24h: -1.5 },
     { id: "hyperliquid", symbol: "HYPE", name: "Hyperliquid", current_price_usd: 120, price_change_percentage_24h: 5.4 },
     { id: "pudgy-penguins", symbol: "PENGU", name: "Pengu", current_price_usd: 0.04, price_change_percentage_24h: 12.0 },
-    { id: "aster-2", symbol: "ASTER", name: "Aster", current_price_usd: 0.06, price_change_percentage_24h: 1.1 },
+    { id: "aster-2", symbol: "ATC", name: "Aster", current_price_usd: 0.06, price_change_percentage_24h: 1.1 },
     { id: "zcash", symbol: "ZEC", name: "Zcash", current_price_usd: 45, price_change_percentage_24h: -2.3 },
     { id: "dogecoin", symbol: "DOGE", name: "Dogecoin", current_price_usd: 0.12, price_change_percentage_24h: 4.2 },
 ];
@@ -98,7 +98,7 @@ export function MarketTicker() {
                     },
                     {
                         id: "aster-2",
-                        symbol: "ASTER",
+                        symbol: "ATC",
                         name: "Aster",
                         current_price_usd: parsePrice(result?.["aster-2"]?.usd),
                         price_change_percentage_24h: parsePrice(result?.["aster-2"]?.usd_24h_change)
@@ -139,10 +139,10 @@ export function MarketTicker() {
     if (loading) return null; // Or skeleton
 
     return (
-        <div className="w-full bg-slate-50 dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800 py-3 overflow-hidden relative group cursor-pointer">
+        <div className="w-full bg-white dark:bg-gray-900 border-y border-[#FF5900]/10 dark:border-[#FF5900]/20 py-3 overflow-hidden relative group cursor-pointer">
             {/* Gradient masks for smooth fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-50 dark:from-gray-900 to-transparent z-[2]"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-50 dark:from-gray-900 to-transparent z-[2]"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-[2]"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-[2]"></div>
 
             {/* Helper text for user if error/fallback is active */}
             {error && (

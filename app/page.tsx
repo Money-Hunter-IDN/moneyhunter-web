@@ -170,7 +170,7 @@ export default function HomePage() {
           </FadeInSection>
         </section>
 
-        <section id="calculator" className="py-20 sm:py-24 px-6 sm:px-4 bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center">
+        <section id="calculator" className="py-20 sm:py-24 px-6 sm:px-4 flex items-center justify-center">
           <FadeInSection>
             <div className="container mx-auto max-w-5xl">
               <div className="text-center mb-12">
