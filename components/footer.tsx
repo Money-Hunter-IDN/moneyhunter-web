@@ -11,7 +11,7 @@ export function Footer() {
 
     const t = {
         en: {
-            tagline: "Building the next generation of Indonesian investors through peer-to-peer knowledge sharing.",
+            tagline: "Building the next generation of global investors through peer-to-peer knowledge sharing.",
             company: "Community",
             academy: "Academy",
             support: "Contact & Support",
@@ -141,7 +141,7 @@ export function Footer() {
                         <Link href="/rules" className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs transition-colors">{t.links.security}</Link>
                         <div className="w-1.5 h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full" />
                         <Link href="/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs transition-colors flex items-center gap-1">
-                            <Globe className="w-3 h-3" /> moneyhunter.id
+                            <Globe className="w-3 h-3" /> moneyhunter.xyz
                         </Link>
                     </div>
                 </div>
