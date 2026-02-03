@@ -90,7 +90,7 @@ export function Footer() {
                         <ul className="space-y-3">
                             <li><Link href="/#features" className="text-gray-600 dark:text-gray-400 hover:text-[#FF5900] transition-colors text-sm">{t.links.about}</Link></li>
                             <li><Link href="/#faq" className="text-gray-600 dark:text-gray-400 hover:text-[#FF5900] transition-colors text-sm">{t.links.faq}</Link></li>
-                            <li><Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-[#FF5900] transition-colors text-sm">{t.links.guidelines}</Link></li>
+                            <li><Link href="/rules" className="text-gray-600 dark:text-gray-400 hover:text-[#FF5900] transition-colors text-sm">{t.links.guidelines}</Link></li>
                         </ul>
                     </div>
 
@@ -138,7 +138,7 @@ export function Footer() {
                         {t.copyright}
                     </p>
                     <div className="flex items-center gap-6 order-1 md:order-2">
-                        <Link href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs transition-colors">{t.links.security}</Link>
+                        <Link href="/rules" className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs transition-colors">{t.links.security}</Link>
                         <div className="w-1.5 h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full" />
                         <Link href="/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs transition-colors flex items-center gap-1">
                             <Globe className="w-3 h-3" /> moneyhunter.id
