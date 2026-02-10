@@ -144,12 +144,7 @@ export function MarketTicker() {
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-[2]"></div>
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-[2]"></div>
 
-            {/* Helper text for user if error/fallback is active */}
-            {error && (
-                <div className="absolute top-0 right-0 z-10 px-2 py-1 bg-red-100 dark:bg-red-900/30 text-[10px] text-red-500 rounded-bl-lg">
-                    Live data limited
-                </div>
-            )}
+
 
             <div className="flex overflow-hidden group">
                 {/* Track 1 */}
