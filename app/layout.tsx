@@ -79,9 +79,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/android-chrome-192x192.png",
+    icon: [
+      { url: '/favicon/favicon.ico' },
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/favicon/apple-touch-icon.png' },
+    ],
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -106,7 +113,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <link rel="manifest" href="/manifest.json" />
+
         <style>{`
 html {
   font-family: 'Plus Jakarta Sans', sans-serif;
