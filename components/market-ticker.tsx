@@ -27,7 +27,7 @@ const FALLBACK_DATA: CryptoPrice[] = [
 export function MarketTicker() {
     const [data, setData] = useState<CryptoPrice[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -125,7 +125,7 @@ export function MarketTicker() {
                 console.error("Failed to fetch market data:", err);
                 // Use fallback data seamlessly if API fails (common with free CoinGecko)
                 setData(FALLBACK_DATA);
-                setError(true);
+
                 setLoading(false);
             }
         };
@@ -143,8 +143,6 @@ export function MarketTicker() {
             {/* Gradient masks for smooth fade edges */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-[2]"></div>
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-[2]"></div>
-
-
 
             <div className="flex overflow-hidden group">
                 {/* Track 1 */}
