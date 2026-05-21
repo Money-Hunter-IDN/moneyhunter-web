@@ -36,11 +36,7 @@ export const metadata: Metadata = {
   publisher: "Money Hunter",
   metadataBase: new URL("https://moneyhunter.xyz"),
   alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/?lang=en",
-      "id-ID": "/?lang=id",
-    },
+    canonical: "https://moneyhunter.xyz",
   },
   openGraph: {
     type: "website",
@@ -155,6 +151,41 @@ html {
                 "target": "https://moneyhunter.xyz/education?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Money Hunter?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Money Hunter is a global peer-to-peer learning community for Web3, Cryptocurrencies, and Stock Markets, founded in 2022 with 2,000+ members worldwide."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What topics does Money Hunter cover?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our community covers stocks, cryptocurrencies, and Web3 developments including technical analysis, fundamental research, DeFi, blockchain technology, and investment mindset."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I join Money Hunter community?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can join Money Hunter on Telegram (t.me/moneyhunteridn), Discord (discord.gg/PcrwafBjAA), or follow us on Instagram and X @moneyhunteridn."
+                  }
+                }
+              ]
             })
           }}
         />
