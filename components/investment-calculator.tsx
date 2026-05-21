@@ -90,18 +90,6 @@ export function InvestmentCalculator() {
 
     return (
         <div className="w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-[#FF5900]/10 dark:border-[#FF5900]/20">
-            <style jsx>{`
-                /* Hide number input spinners */
-                input[type=number]::-webkit-inner-spin-button, 
-                input[type=number]::-webkit-outer-spin-button { 
-                    -webkit-appearance: none; 
-                    margin: 0; 
-                }
-                input[type=number] {
-                    -moz-appearance: textfield;
-                }
-            `}</style>
-
             <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-8">
                     <div className="p-3 bg-[#FF5900]/10 rounded-xl">

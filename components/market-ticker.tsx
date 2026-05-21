@@ -39,7 +39,6 @@ export function MarketTicker() {
                 if (!response.ok) throw new Error("Rate limit or error");
 
                 const result = await response.json();
-                console.log("CoinGecko API Response:", result); // Debugging
 
                 const parsePrice = (val: number | string | null | undefined) => {
                     const num = Number(val);

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://moneyhunter.id",
+    url: "https://moneyhunter.xyz",
     siteName: "Money Hunter",
     title: "Money Hunter | Global Web3 & Finance Education Community",
     description:

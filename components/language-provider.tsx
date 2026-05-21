@@ -12,14 +12,21 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function detectBrowserLanguage(): Language {
+    if (typeof navigator === "undefined") return "en";
+    const lang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || "en";
+    return lang.toLowerCase().startsWith("id") ? "id" : "en";
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const [language, setLanguage] = useState<Language>("en");
 
     useEffect(() => {
-        // Load saved language or detect browser preference
-        const savedLang = localStorage.getItem("language") as Language;
-        if (savedLang) {
+        const savedLang = localStorage.getItem("language") as Language | null;
+        if (savedLang === "en" || savedLang === "id") {
             setLanguage(savedLang);
+        } else {
+            setLanguage(detectBrowserLanguage());
         }
     }, []);
 
@@ -29,8 +36,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     };
 
     const toggleLanguage = () => {
-        const newLang = language === "en" ? "id" : "en";
-        handleSetLanguage(newLang);
+        handleSetLanguage(language === "en" ? "id" : "en");
     };
 
     return (

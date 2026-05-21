@@ -24,7 +24,7 @@ export function Footer() {
                 guidelines: "Community Guidelines",
                 security: "Security Tips",
             },
-            copyright: "© 2026 Money Hunter. All rights reserved.",
+            copyright: `© ${new Date().getFullYear()} Money Hunter. All rights reserved.`,
             email_label: "Found a partnership opportunity?",
         },
         id: {
@@ -41,7 +41,7 @@ export function Footer() {
                 guidelines: "Panduan Komunitas",
                 security: "Tips Keamanan",
             },
-            copyright: "© 2026 Money Hunter. Seluruh hak cipta dilindungi.",
+            copyright: `© ${new Date().getFullYear()} Money Hunter. Seluruh hak cipta dilindungi.`,
             email_label: "Ada peluang kerjasama?",
         }
     }[language];
