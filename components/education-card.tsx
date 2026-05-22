@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, LucideIcon } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 interface EducationCardProps {
     title: string;
@@ -12,15 +13,19 @@ interface EducationCardProps {
 }
 
 export function EducationCard({ title, description, href, icon: Icon, badge }: EducationCardProps) {
+    const { language } = useLanguage();
+    const learnMore = language === "id" ? "Pelajari Lebih" : "Learn More";
+
     return (
         <Link
             href={href}
             target={href.startsWith("http") ? "_blank" : "_self"}
+            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
             className="group block h-full"
         >
             <div className="relative h-full bg-white dark:bg-gray-900 rounded-xl p-6 border border-[#FF5900]/10 dark:border-[#FF5900]/20 shadow-xl transition-[transform,box-shadow] duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#FF5900]/10 flex flex-col">
                 <div className="flex items-start justify-between mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#FF5900]/10 flex items-center justify-center text-[#FF5900] group-hover:bg-[#FF5900] group-hover:text-white transition-colors duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-[#FF5900]/10 flex items-center justify-center text-[#FF5900] group-hover:bg-[#FF5900] group-hover:text-white transition-[background-color,color] duration-300">
                         <Icon className="w-5 h-5" />
                     </div>
                     {badge && (
@@ -39,7 +44,7 @@ export function EducationCard({ title, description, href, icon: Icon, badge }: E
                 </p>
 
                 <div className="flex items-center text-sm font-semibold text-[#FF5900] group-hover:translate-x-1 transition-transform mt-auto">
-                    Learn More
+                    {learnMore}
                     <ArrowRight className="w-4 h-4 ml-1.5" />
                 </div>
             </div>

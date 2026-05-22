@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -11,10 +12,19 @@ import { ArrowRight, Bitcoin } from "lucide-react";
 import { FaTelegram, FaDiscord, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import { FadeInSection } from "@/components/fade-in-section";
 import { ScrollToTop } from "@/components/scroll-to-top";
-import { InvestmentCalculator } from "@/components/investment-calculator";
 import { MarketTicker } from "@/components/market-ticker";
 import { useLanguage } from "@/components/language-provider";
 import { Footer } from "@/components/footer";
+
+const InvestmentCalculator = dynamic(
+  () => import("@/components/investment-calculator").then((m) => ({ default: m.InvestmentCalculator })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[420px] bg-gray-100 dark:bg-gray-800 rounded-2xl animate-pulse" />
+    ),
+  }
+);
 
 export default function HomePage() {
   const { language } = useLanguage();

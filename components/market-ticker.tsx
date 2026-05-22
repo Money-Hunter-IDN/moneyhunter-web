@@ -30,10 +30,15 @@ export function MarketTicker() {
 
 
     useEffect(() => {
+        let controller = new AbortController();
+
         const fetchData = async () => {
+            controller.abort();
+            controller = new AbortController();
             try {
                 const response = await fetch(
-                    "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,ripple,hyperliquid,pudgy-penguins,aster-2,zcash,dogecoin&vs_currencies=usd&include_24hr_change=true"
+                    "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,ripple,hyperliquid,pudgy-penguins,aster-2,zcash,dogecoin&vs_currencies=usd&include_24hr_change=true",
+                    { signal: controller.signal }
                 );
 
                 if (!response.ok) throw new Error("Rate limit or error");
@@ -121,18 +126,18 @@ export function MarketTicker() {
                 setData(formattedData);
                 setLoading(false);
             } catch (err) {
-                console.error("Failed to fetch market data:", err);
-                // Use fallback data seamlessly if API fails (common with free CoinGecko)
+                if (err instanceof Error && err.name === "AbortError") return;
                 setData(FALLBACK_DATA);
-
                 setLoading(false);
             }
         };
 
         fetchData();
-        // Refresh every 60 seconds
         const interval = setInterval(fetchData, 60000);
-        return () => clearInterval(interval);
+        return () => {
+            controller.abort();
+            clearInterval(interval);
+        };
     }, []);
 
     if (loading) return null; // Or skeleton
