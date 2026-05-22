@@ -18,7 +18,7 @@ export function EducationCard({ title, description, href, icon: Icon, badge }: E
             target={href.startsWith("http") ? "_blank" : "_self"}
             className="group block h-full"
         >
-            <div className="relative h-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-[#FF5900]/10 dark:border-[#FF5900]/20 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#FF5900]/10 flex flex-col">
+            <div className="relative h-full bg-white dark:bg-gray-900 rounded-xl p-6 border border-[#FF5900]/10 dark:border-[#FF5900]/20 shadow-xl transition-[transform,box-shadow] duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#FF5900]/10 flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                     <div className="w-10 h-10 rounded-lg bg-[#FF5900]/10 flex items-center justify-center text-[#FF5900] group-hover:bg-[#FF5900] group-hover:text-white transition-colors duration-300">
                         <Icon className="w-5 h-5" />

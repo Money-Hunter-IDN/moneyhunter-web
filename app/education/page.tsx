@@ -199,8 +199,6 @@ export default function EducationPage() {
 
     return (
         <div className="min-h-screen pt-24 pb-20 px-6 sm:px-4">
-            {/* Background gradient */}
-            <div className="fixed inset-0 bg-gradient-to-br from-[#FF5900]/5 via-white dark:via-gray-950 to-[#FF5900]/5 -z-10"></div>
 
             <div className="container mx-auto max-w-6xl">
                 <FadeInSection>

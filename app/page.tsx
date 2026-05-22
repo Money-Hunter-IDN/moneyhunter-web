@@ -124,8 +124,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-      <div className="fixed inset-0 bg-gradient-to-r from-[#FF5900]/8 via-white dark:via-gray-950 to-[#FF5900]/8"></div>
-      <div className="relative">
+      <div>
         <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-24 md:pb-16 px-6 sm:px-4 min-h-[90vh] flex items-center justify-center">
           <div className="container mx-auto text-center max-w-4xl">
             <div className="mb-6">
@@ -286,7 +285,7 @@ export default function HomePage() {
 
               <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
                 {t.faq.items.map((item, i) => (
-                  <AccordionItem key={i} value={`item-${i + 1}`} className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-[#FF5900]/10 dark:border-[#FF5900]/20 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
+                  <AccordionItem key={i} value={`item-${i + 1}`} className="bg-white dark:bg-gray-900 border-[#FF5900]/10 dark:border-[#FF5900]/20 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
                     <AccordionTrigger className="text-gray-900 dark:text-white hover:text-[#FF5900] text-base sm:text-lg accordion-trigger text-left">
                       {item.q}
                     </AccordionTrigger>

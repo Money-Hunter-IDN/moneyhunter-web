@@ -89,7 +89,7 @@ export function InvestmentCalculator() {
     const totals = calculateTotal();
 
     return (
-        <div className="w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-[#FF5900]/10 dark:border-[#FF5900]/20">
+        <div className="w-full bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-[#FF5900]/10 dark:border-[#FF5900]/20">
             <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-8">
                     <div className="p-3 bg-[#FF5900]/10 rounded-xl">
@@ -181,7 +181,7 @@ export function InvestmentCalculator() {
                             </div>
                         </div>
 
-                        <div className="p-4 bg-white/50 dark:bg-gray-900/50 rounded-xl border border-[#FF5900]/10 dark:border-[#FF5900]/20">
+                        <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl border border-[#FF5900]/10 dark:border-[#FF5900]/20">
                             <div className="flex justify-between items-center mb-2">
                                 <span className="text-sm text-gray-500 dark:text-gray-400">
                                     Total Investment

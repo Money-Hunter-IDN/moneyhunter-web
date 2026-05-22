@@ -146,7 +146,7 @@ export function MarketTicker() {
             <div className="flex overflow-hidden group">
                 {/* Track 1 */}
                 <div className="flex animate-marquee gap-12 pr-12 whitespace-nowrap shrink-0 items-center">
-                    {[...data, ...data, ...data, ...data].map((coin, index) => (
+                    {[...data, ...data].map((coin, index) => (
                         <div key={`${coin.id}-${index}-1`} className="flex items-center gap-2 group-hover/item:opacity-75 transition-opacity">
                             <span className="font-bold text-sm text-gray-700 dark:text-gray-200">{coin.symbol}</span>
                             <span className="text-sm font-medium text-gray-900 dark:text-white">
@@ -166,7 +166,7 @@ export function MarketTicker() {
 
                 {/* Track 2 (Duplicate) */}
                 <div className="flex animate-marquee gap-12 pr-12 whitespace-nowrap shrink-0 items-center">
-                    {[...data, ...data, ...data, ...data].map((coin, index) => (
+                    {[...data, ...data].map((coin, index) => (
                         <div key={`${coin.id}-${index}-2`} className="flex items-center gap-2 group-hover/item:opacity-75 transition-opacity">
                             <span className="font-bold text-sm text-gray-700 dark:text-gray-200">{coin.symbol}</span>
                             <span className="text-sm font-medium text-gray-900 dark:text-white">

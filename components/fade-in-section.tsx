@@ -40,7 +40,7 @@ export function FadeInSection({ children, className = "", delay = 0 }: FadeInSec
     return (
         <div
             ref={domRef}
-            className={`transition-all duration-700 ease-out ${isVisible
+            className={`transition-[opacity,transform] duration-700 ease-out ${isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
                 } ${className}`}
