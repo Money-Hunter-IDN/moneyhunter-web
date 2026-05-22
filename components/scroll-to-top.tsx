@@ -32,7 +32,7 @@ export function ScrollToTop() {
         <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className="fixed bottom-6 right-6 z-50 p-3 bg-[#FF5900] text-white rounded-full shadow-lg hover:bg-[#FF5900]/90 hover:shadow-xl hover:shadow-[#FF5900]/25 transition-all duration-200 animate-fade-in-up"
+            className="fixed bottom-6 right-6 z-50 p-3 bg-[#FF5900] text-white rounded-full shadow-lg hover:bg-[#FF5900]/90 hover:shadow-xl hover:shadow-[#FF5900]/25 transition-[background-color,box-shadow] duration-200 animate-fade-in-up"
         >
             <ArrowUp className="w-5 h-5" />
         </button>

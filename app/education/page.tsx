@@ -379,7 +379,7 @@ export default function EducationPage() {
                     </section>
                 </div>
 
-                <div className="mt-24 text-center bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 sm:p-12 border border-gray-100 dark:border-gray-800 backdrop-blur-sm">
+                <div className="mt-24 text-center bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 sm:p-12 border border-gray-100 dark:border-gray-800">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t.cta_title}</h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
                         {t.cta_desc}
@@ -388,7 +388,7 @@ export default function EducationPage() {
                         href="https://discord.gg/PcrwafBjAA"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg bg-[#FF5900] text-white hover:bg-[#FF5900]/80 transition-all shadow-lg shadow-[#FF5900]/20 transform hover:-translate-y-1"
+                        className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg bg-[#FF5900] text-white hover:bg-[#FF5900]/80 transition-[background-color,transform] duration-200 shadow-lg shadow-[#FF5900]/20 hover:-translate-y-1"
                     >
                         {t.cta_button}
                     </a>

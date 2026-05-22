@@ -48,8 +48,6 @@ export function Footer() {
 
     return (
         <footer className="relative bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-900 pt-8 pb-8 overflow-hidden">
-            {/* Background Decorative Element */}
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-[#FF5900]/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-8">
@@ -67,16 +65,16 @@ export function Footer() {
                             {t.tagline}
                         </p>
                         <div className="flex items-center gap-3">
-                            <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300">
+                            <a href="https://t.me/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-[color,background-color,border-color] duration-300">
                                 <FaTelegram className="w-4.5 h-4.5" />
                             </a>
-                            <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-all duration-300">
+                            <a href="https://discord.gg/PcrwafBjAA" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-[color,background-color,border-color] duration-300">
                                 <FaDiscord className="w-4.5 h-4.5" />
                             </a>
-                            <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] transition-all duration-300">
+                            <a href="https://instagram.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] transition-[color,background-color,border-color] duration-300">
                                 <FaInstagram className="w-4.5 h-4.5" />
                             </a>
-                            <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            <a href="https://x.com/moneyhunteridn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-black hover:text-white hover:border-black transition-[color,background-color,border-color] duration-300">
                                 <FaXTwitter className="w-4.5 h-4.5" />
                             </a>
                         </div>
@@ -116,7 +114,7 @@ export function Footer() {
                             </p>
                             <a
                                 href="mailto:moneyhunteridn@gmail.com"
-                                className="group flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-[#FF5900]/30 transition-all duration-300"
+                                className="group flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-[#FF5900]/30 transition-[color,background-color,border-color] duration-300"
                             >
                                 <div className="w-8 h-8 rounded-lg bg-[#FF5900]/10 flex items-center justify-center text-[#FF5900] flex-shrink-0">
                                     <Mail className="w-4 h-4" />

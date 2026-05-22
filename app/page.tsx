@@ -146,14 +146,14 @@ export default function HomePage() {
               <a
                 href="#features"
                 onClick={handleJoin}
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] border-2 border-transparent text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-md w-full sm:w-auto cursor-pointer"
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[#FF5900] border-2 border-transparent text-white hover:bg-[#FF5900]/80 hover:shadow-lg hover:shadow-[#FF5900]/25 transition-[background-color,box-shadow] duration-200 shadow-md w-full sm:w-auto cursor-pointer"
               >
                 {t.hero.cta_join}
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
               <a
                 href="#faq"
-                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg border-2 border-[#FF5900] text-[#FF5900] bg-white dark:bg-gray-900 hover:bg-[#FF5900]/10 hover:text-[#FF5900] hover:shadow-lg hover:shadow-[#FF5900]/25 transition-all duration-200 shadow-sm group w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-semibold rounded-lg border-2 border-[#FF5900] text-[#FF5900] bg-white dark:bg-gray-900 hover:bg-[#FF5900]/10 hover:text-[#FF5900] hover:shadow-lg hover:shadow-[#FF5900]/25 transition-[background-color,box-shadow] duration-200 shadow-sm group w-full sm:w-auto"
               >
                 {t.hero.cta_faq}
               </a>
@@ -286,7 +286,7 @@ export default function HomePage() {
               <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
                 {t.faq.items.map((item, i) => (
                   <AccordionItem key={i} value={`item-${i + 1}`} className="bg-white dark:bg-gray-900 border-[#FF5900]/10 dark:border-[#FF5900]/20 rounded-lg px-4 sm:px-6 shadow-md shadow-[#FF5900]/5 hover:shadow-lg hover:shadow-[#FF5900]/10 transition-shadow duration-200">
-                    <AccordionTrigger className="text-gray-900 dark:text-white hover:text-[#FF5900] text-base sm:text-lg accordion-trigger text-left">
+                    <AccordionTrigger className="text-gray-900 dark:text-white hover:text-[#FF5900] text-base sm:text-lg accordion-trigger text-left cursor-pointer">
                       {item.q}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">

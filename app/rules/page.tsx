@@ -171,7 +171,7 @@ export default function RulesPage() {
                         <div className="grid md:grid-cols-2 gap-6">
                             {t.guidelines.items.map((item, i) => (
                                 <FadeInSection key={i} delay={i * 100}>
-                                    <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all hover:shadow-xl hover:shadow-[#FF5900]/5 hover:-translate-y-1">
+                                    <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-[box-shadow,transform] duration-200 hover:shadow-xl hover:shadow-[#FF5900]/5 hover:-translate-y-1">
                                         <div className={`w-12 h-12 rounded-xl bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center mb-6 ${item.color}`}>
                                             <item.icon className="w-6 h-6" />
                                         </div>
@@ -196,7 +196,7 @@ export default function RulesPage() {
                         <div className="grid md:grid-cols-2 gap-6">
                             {t.security.items.map((item, i) => (
                                 <FadeInSection key={i} delay={i * 100}>
-                                    <div className="p-6 rounded-2xl bg-[#FF5900]/5 dark:bg-[#FF5900]/5 border border-[#FF5900]/10 dark:border-[#FF5900]/20 transition-all hover:shadow-xl hover:shadow-[#FF5900]/5 hover:-translate-y-1">
+                                    <div className="p-6 rounded-2xl bg-[#FF5900]/5 dark:bg-[#FF5900]/5 border border-[#FF5900]/10 dark:border-[#FF5900]/20 transition-[box-shadow,transform] duration-200 hover:shadow-xl hover:shadow-[#FF5900]/5 hover:-translate-y-1">
                                         <div className={`w-12 h-12 rounded-xl bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center mb-6 ${item.color}`}>
                                             <item.icon className="w-6 h-6" />
                                         </div>

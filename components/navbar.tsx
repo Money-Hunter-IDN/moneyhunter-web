@@ -47,7 +47,7 @@ const Navbar = () => {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800 backdrop-blur-sm fixed w-full top-0 z-50 bg-white/95 dark:bg-gray-900/95">
+    <header className="border-b border-gray-200 dark:border-gray-800 fixed w-full top-0 z-50 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 py-4 flex items-center">
         <div className="flex-1 flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
@@ -120,7 +120,7 @@ const Navbar = () => {
         id="mobile-menu"
         className={`md:hidden transition-[max-height,opacity] duration-300 ease-out overflow-hidden border-t border-gray-200 dark:border-gray-800 ${open ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0"}`}
       >
-        <div className="px-4 py-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
+        <div className="px-4 py-3 bg-white dark:bg-gray-900">
           <nav className="flex flex-col gap-3">
             <Link
               href="/#features"
